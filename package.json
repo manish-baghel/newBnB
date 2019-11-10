@@ -1,0 +1,25 @@
+{
+  "name": "bnb",
+  "version": "1.0.0",
+  "description": "New and Improved Apartment Rental",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manish-baghel/newBnB.git"
+  },
+  "keywords": [
+    "nodejs",
+    "npm",
+    "express",
+    "mongodb"
+  ],
+  "author": "manish-baghel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manish-baghel/newBnB/issues"
+  },
+  "homepage": "https://github.com/manish-baghel/newBnB#readme"
+}
