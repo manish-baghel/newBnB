@@ -1,7 +1,7 @@
 'use strict';
 
 import {Response, Request, NextFunction, RequestHandler} from 'express';
-import getEnv from './sessionVariables';
+import getEnv from './sessionVariable';
 
 // env 
 const environment = process.env.ENV;
@@ -11,12 +11,13 @@ if (!environment) {
       throw new Error("environment not found");
 }
 const env = getEnv(environment);
+console.log(env);
 export { env };
-import path from "path";
+import * as path from "path";
 import { app, express } from './initServer';
-import http from "http";
-import fs from 'fs';
-import fse from "fs-extra";
+import * as http from "http";
+import * as fs from 'fs';
+import * as fse from "fs-extra";
 
 const publicPath = path.join(__dirname, "../public/uploads");
 console.log("public path -->", publicPath);

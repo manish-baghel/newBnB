@@ -1,11 +1,11 @@
-import express from "express";
-import compression from "compression";
-import cors from "cors";
-import http from "http";
-import bodyParser from "body-parser";
-import path from "path";
-import ejs from "ejs";
-import fs from "fs";
+const express = require("express");
+const compression = require("compression");
+const cors = require("cors");
+import * as http from "http";
+import * as bodyParser from "body-parser";
+import * as path from "path";
+import * as ejs from "ejs";
+import * as fs from "fs";
 import { env } from "./app";
 
 

@@ -1,4 +1,4 @@
-import * as jwt from "jwtService";
+import * as jwt from "./jwtService";
 import * as bcrypt from "bcryptjs";
 import { promisify } from "util";
 import { env } from "../app";
