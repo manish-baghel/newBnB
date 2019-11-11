@@ -6,7 +6,7 @@ import cryptService from "../../services/cryptService";
 
 export interface IToken {
   id: number | string,
-  random : number | string,
+  random : Number | string,
   data?: any
 }
 
@@ -15,7 +15,7 @@ const expressSession = async (req:Request, res:Response, next:NextFunction) => {
   if(!headerToken)
     return next(boom.unauthorized("token not found"));
   try{
-    const tokenData:any = await cryptService.verifyToken(headerToken);
+    const tokenData:any = await cryptService.verify(headerToken);
     const session:any = await Session.findOne({_id:tokenData.id}); 
     if(!session)
       return next(boom.unauthorized("Session does not exist"));

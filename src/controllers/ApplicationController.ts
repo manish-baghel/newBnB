@@ -1,15 +1,15 @@
 import { Request, Response, NextFunction} from "express";
 import cryptService from "../services/cryptService";
-import path from "path";
+import * as path from "path";
 import boom from "boom";
 import User from "../db/models/UserModel";
 import Session from "../db/models/SessionModel";
 import { IToken } from "../middlewares/expressSession";
+import AuthService from "../services/authService";
 
 
 
-
-export const login = async(req:Request, res:Response, next:NextFunction) => {
+const login = async(req:Request, res:Response, next:NextFunction) => {
   let { qtype } = req.query;
   if(!qtype)
     qtype = "default";
@@ -47,10 +47,10 @@ export const login = async(req:Request, res:Response, next:NextFunction) => {
         const newToken = cryptService.sign(newTokenData);
 
         const data = {
-          name,
-          email,
-          phone,
-          gender,
+          name:name,
+          email:email,
+          phone:phone,
+          gender:gender,
           token:newToken
         }
 
@@ -74,8 +74,10 @@ export const login = async(req:Request, res:Response, next:NextFunction) => {
 
         const user:any = authResponse;
         const newSession = await Session.createOne({user_id: user._id,loggedInAt});
-        const { sessionId } = newSession._id;
+        const sessionId:any = newSession._id;
         const rn = Math.floor(Math.random()*100000000 + Date.now());
+        const {first_name,middle_name,last_name,gender,phone, dob} = user;
+        const name = `${first_name} ${middle_name} ${last_name}`;
         const tokenData:IToken = {
           id: sessionId,
           random: rn
@@ -87,7 +89,7 @@ export const login = async(req:Request, res:Response, next:NextFunction) => {
           dob:dob,
           email:email,
           phone:phone,
-          token,
+          token:token,
           role:user.role
         }
         return res.json({status:true, data, msg:"Logged in Successfully"});
@@ -97,3 +99,9 @@ export const login = async(req:Request, res:Response, next:NextFunction) => {
       }
   }
 }
+
+const applicationController = {
+  login:login
+}
+
+export default applicationController;

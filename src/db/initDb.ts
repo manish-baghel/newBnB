@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import {env } from "../app.ts";
+import {env } from "../app";
 
 const DB_URL = `${env.DB_URL}:${env.DB_PORT}/${env.DB_NAME}`;
 mongoose.connect(DB_URL);

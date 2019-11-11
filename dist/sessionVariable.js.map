@@ -1,0 +1,1 @@
+{"version":3,"file":"sessionVariable.js","sourceRoot":"","sources":["../src/sessionVariable.ts"],"names":[],"mappings":";;AAAA,6BAA6B;AAC7B,MAAM,MAAM,GAAG,CAAC,WAAkB,EAAC,EAAE;IACjC,MAAM,gBAAgB,GAAG,IAAI,CAAC,eAAe,EAAE,EAAE,GAAG,EAAE,WAAW,EAAC,CAAC,CAAC;IAEpE,OAAO,gBAAgB,CAAC;AAE5B,CAAC,CAAA;AAED,kBAAe,MAAM,CAAC"}

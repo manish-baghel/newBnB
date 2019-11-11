@@ -1,7 +1,8 @@
 import { Request, NextFunction, Response } from "express";
 import boom from "boom";
+import User from "../../db/models/UserModel";
 
-const identification = async (req:Request, res:Response, next:Nextfunction) => {
+const identification = async (req:Request, res:Response, next:NextFunction) => {
   if(!req.session)
     return next(boom.unauthorized("Session Not Found"));
   
@@ -15,7 +16,7 @@ const identification = async (req:Request, res:Response, next:Nextfunction) => {
     if(!user)
       return next(boom.unauthorized("User Not Found"));
     if(req.session.data && user.role.title!=req.session.data.user.role.title)
-      return next(boom.unauthorized("Stop F***in around");
+      return next(boom.unauthorized("Stop F***in around"));
     req.session.data = {}
     req.session.data.user = {
       phone: user.phone,
