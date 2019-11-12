@@ -20,6 +20,7 @@ const userSchema = new Schema(
     phone: {type:String,required:true,trim:true},
     gender: {type:String,required:true,trim:true},
     role: roleSchema,
+    verified: {type:Boolean,required:true,default:false}
   },
   { timestamps:true}
 );
