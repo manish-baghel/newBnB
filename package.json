@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manish-baghel/bnb.git"
+    "url": "git+https://github.com/manish-baghel/newBnB.git"
   },
   "keywords": [
     "nodejs",
@@ -21,9 +21,9 @@
   "author": "manish-baghel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manish-baghel/bnb/issues"
+    "url": "https://github.com/manish-baghel/newBnB/issues"
   },
-  "homepage": "https://github.com/manish-baghel/bnb#readme",
+  "homepage": "https://github.com/manish-baghel/newBnB#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
