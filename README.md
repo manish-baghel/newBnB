@@ -1,1 +1,1 @@
-# newBnB
+# BNB

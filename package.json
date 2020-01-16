@@ -1,7 +1,7 @@
 {
   "name": "bnb",
   "version": "1.0.0",
-  "description": "New and Improved Apartment Rental",
+  "description": "Server",
   "main": "app.js",
   "scripts": {
     "start:ts": "ENV='dev' nodemon --watch 'src' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/app.ts",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manish-baghel/newBnB.git"
+    "url": "git+https://github.com/manish-baghel/bnb.git"
   },
   "keywords": [
     "nodejs",
@@ -21,9 +21,9 @@
   "author": "manish-baghel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manish-baghel/newBnB/issues"
+    "url": "https://github.com/manish-baghel/bnb/issues"
   },
-  "homepage": "https://github.com/manish-baghel/newBnB#readme",
+  "homepage": "https://github.com/manish-baghel/bnb#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
@@ -35,6 +35,7 @@
     "http": "0.0.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.9",
+    "mongoose-type-url": "^1.0.6",
     "path": "^0.12.7"
   },
   "devDependencies": {

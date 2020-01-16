@@ -2,8 +2,7 @@ import mongoose from "mongoose";
 import {env } from "../app";
 
 const DB_URL = `${env.DB_URL}:${env.DB_PORT}/${env.DB_NAME}`;
-mongoose.connect(DB_URL);
-
+mongoose.connect(DB_URL,{ useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify: false,useCreateIndex: true });
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console,'==> connection error: '));

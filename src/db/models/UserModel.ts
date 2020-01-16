@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+// var mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
@@ -14,7 +15,6 @@ const userSchema = new Schema(
     first_name : { type:String, required:true, trim:true},
     last_name : {type:String, required:true, trim:true},
     middle_name: {type:String, trim:true},
-    dob: {type:Date},
     email: {type:String,required:true, trim:true},
     password: {type:String,required:true,trim:true},
     phone: {type:String,required:true,trim:true},
